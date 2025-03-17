@@ -9,7 +9,7 @@ green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 cd
 MYIP=$(curl -sS ipv4.icanhazip.com)
-NameUser=$(curl -sS https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/ip | grep $MYIP | awk '{print $2}')
+NameUser=$(curl -sS https://raw.githubusercontent.com/fanoraprem/srcscript/main/ip | grep $MYIP | awk '{print $2}')
 
 cekdata=$(curl -sS https://raw.githubusercontent.com/bokir-tampan/userbackup/main/$NameUser/$NameUser.zip | grep 404 | awk '{print $1}' | cut -d: -f1)
 
