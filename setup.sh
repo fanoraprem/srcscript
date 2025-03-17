@@ -4,7 +4,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/ip > /root/tmp
+    curl -sS https://raw.githubusercontent.com/fanoraprem/srcscript/main/ip > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -185,7 +185,7 @@ echo -ne "[ ${green}INFO${NC} ] Memasang Domain.....  "
 
 mkdir -p /var/lib/scrz-prem >/dev/null 2>&1
 echo "IP=" >> /var/lib/scrz-prem/ipvps.conf
-wget https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/ssh/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://raw.githubusercontent.com/fanoraprem/srcscript/main/ssh/cf.sh && chmod +x cf.sh && ./cf.sh
 
 
 #if [ -f "/etc/xray/domain" ]; then
@@ -204,7 +204,7 @@ rm setup.sh
 
 echo ""
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green      SCRIPT MAIL PRABOWO               $NC"
+echo -e "$green      SCRIPT FANORA TUNNEL              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
@@ -290,7 +290,7 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "=====================-[ SCRIPT MAIL PRABOWO ]-===================="
+echo "=====================-[ SCRIPT FANORA TUNNEL ]-===================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""
@@ -332,7 +332,7 @@ echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "===============-[ Script Created By MAIL PRABOWO ]-==============="
+echo "===============-[ Script Created By FANORA TUNNEL ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
