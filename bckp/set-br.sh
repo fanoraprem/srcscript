@@ -26,7 +26,7 @@ curl -fsSL https://rclone.org/install.sh | bash > /dev/null 2>&1
 printf "q\n" | rclone config > /dev/null 2>&1
 sleep 1
 echo -e "[ ${green}INFO${NC} ] Downloading rclone config ... "
-wget -q -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/bckp/rclone.conf"
+wget -q -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/fanoraprem/srcscript/main/bckp/rclone.conf"
 git clone https://github.com/magnific0/wondershaper.git &> /dev/null
 cd wondershaper
 sleep 1
@@ -65,9 +65,9 @@ EOF
 chown -R www-data:www-data /etc/msmtprc
 sleep 1
 echo -e "[ ${green}INFO${NC} ] Downloading files... "
-wget -q -O /usr/bin/backup "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/bckp/backup.sh" && chmod +x /usr/bin/backup
-wget -q -O /usr/bin/restore "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/bckp/restore.sh" && chmod +x /usr/bin/restore
-wget -q -O /usr/bin/cleaner "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/bckp/logcleaner.sh" && chmod +x /usr/bin/cleaner
+wget -q -O /usr/bin/backup "https://raw.githubusercontent.com/fanoraprem/srcscript/main/bckp/backup.sh" && chmod +x /usr/bin/backup
+wget -q -O /usr/bin/restore "https://raw.githubusercontent.com/fanoraprem/srcscript/main/bckp/restore.sh" && chmod +x /usr/bin/restore
+wget -q -O /usr/bin/cleaner "https://raw.githubusercontent.com/fanoraprem/srcscript/main/bckp/logcleaner.sh" && chmod +x /usr/bin/cleaner
 
 if [ ! -f "/etc/cron.d/cleaner" ]; then
 cat> /etc/cron.d/cleaner << END
