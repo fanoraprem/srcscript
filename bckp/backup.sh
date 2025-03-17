@@ -12,7 +12,7 @@ IP=$(curl -sS ipv4.icanhazip.com);
 date=$(date +"%Y-%m-%d")
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-NameUser=$(curl -sS https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/ip | grep $MYIP | awk '{print $2}')
+NameUser=$(curl -sS https://raw.githubusercontent.com/fanoraprem/srcscript/main/ip | grep $MYIP | awk '{print $2}')
 
 
 clear
