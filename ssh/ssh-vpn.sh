@@ -20,7 +20,7 @@ commonname=none
 email=admin@bahenol
 
 # simple password minimal
-curl -sS https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
+curl -sS https://raw.githubusercontent.com/fanoraprem/srcscript/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -131,13 +131,13 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/ssh/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/fanoraprem/srcscript/main/ssh/nginx.conf"
 mkdir -p /home/vps/public_html
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/ssh/newudpgw"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/fanoraprem/srcscript/main/ssh/newudpgw"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -247,7 +247,7 @@ echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 # banner /etc/issue.net
 sleep 1
 echo -e "[ ${green}INFO$NC ] Settings banner"
-wget -q -O /etc/issue.net "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/issue.net"
+wget -q -O /etc/issue.net "https://raw.githubusercontent.com/fanoraprem/srcscript/main/issue.net"
 chmod +x /etc/issue.net
 echo "Banner /etc/issue.net" >> /etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
@@ -258,7 +258,7 @@ cat> /etc/issue.net << END
 END
 
 #install bbr dan optimasi kernel
-wget https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/ssh/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+wget https://raw.githubusercontent.com/fanoraprem/srcscript/main/ssh/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 
 # blockir torrent
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
@@ -279,31 +279,31 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O usernew "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/ssh/usernew.sh"
-wget -O hapus "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/ssh/hapus.sh"
-wget -O member "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/ssh/member.sh"
-wget -O renew "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/ssh/renew.sh"
-wget -O cek "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/ssh/cek.sh"
-wget -O add-host "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/ssh/add-host.sh"
-wget -O speedtest "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/ssh/speedtest_cli.py"
-wget -O xp "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/ssh/xp.sh"
-wget -O asu "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/asu.sh"
-wget -O menu "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/menu.sh"
-wget -O sshws "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/ssh/sshws.sh"
-wget -O trial "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/ssh/trial.sh"
-wget -O ssh-menu "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/menu_all/ssh-menu.sh"
-wget -O vmess-menu "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/menu_all/vmess-menu.sh"
-wget -O vless-menu "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/menu_all/vless-menu.sh"
-wget -O trojan-menu "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/menu_all/trojan-menu.sh"
-wget -O ssgrpc-menu "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/menu_all/ssgrpc-menu.sh"
-wget -O cek-ws "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/xray/cek-ws.sh"
-wget -O about "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/ssh/about.sh" 
-wget -O running "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/ssh/running.sh"
-wget -O banner "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/banner.sh"
-wget -O del-tr "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/xray/del-tr.sh"
-wget -O trial-menu "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/menu_all/trial-menu.sh"
-wget -O info-menu "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/menu_all/info-menu.sh"
-wget -O ceklim "https://raw.githubusercontent.com/Fahmiiiiiiii/src/main/ssh/ceklim.sh"
+wget -O usernew "https://raw.githubusercontent.com/fanoraprem/srcscript/main/ssh/usernew.sh"
+wget -O hapus "https://raw.githubusercontent.com/fanoraprem/srcscript/main/ssh/hapus.sh"
+wget -O member "https://raw.githubusercontent.com/fanoraprem/srcscript/main/ssh/member.sh"
+wget -O renew "https://raw.githubusercontent.com/fanoraprem/srcscript/main/ssh/renew.sh"
+wget -O cek "https://raw.githubusercontent.com/fanoraprem/srcscript/main/ssh/cek.sh"
+wget -O add-host "https://raw.githubusercontent.com/fanoraprem/srcscript/main/ssh/add-host.sh"
+wget -O speedtest "https://raw.githubusercontent.com/fanoraprem/srcscript/main/ssh/speedtest_cli.py"
+wget -O xp "https://raw.githubusercontent.com/fanoraprem/srcscript/main/ssh/xp.sh"
+wget -O asu "https://raw.githubusercontent.com/fanoraprem/srcscript/main/asu.sh"
+wget -O menu "https://raw.githubusercontent.com/fanoraprem/srcscript/main/menu.sh"
+wget -O sshws "https://raw.githubusercontent.com/fanoraprem/srcscript/main/ssh/sshws.sh"
+wget -O trial "https://raw.githubusercontent.com/fanoraprem/srcscript/main/ssh/trial.sh"
+wget -O ssh-menu "https://raw.githubusercontent.com/fanoraprem/srcscript/main/menu_all/ssh-menu.sh"
+wget -O vmess-menu "https://raw.githubusercontent.com/fanoraprem/srcscript/main/menu_all/vmess-menu.sh"
+wget -O vless-menu "https://raw.githubusercontent.com/fanoraprem/srcscript/main/menu_all/vless-menu.sh"
+wget -O trojan-menu "https://raw.githubusercontent.com/fanoraprem/srcscript/main/menu_all/trojan-menu.sh"
+wget -O ssgrpc-menu "https://raw.githubusercontent.com/fanoraprem/srcscript/main/menu_all/ssgrpc-menu.sh"
+wget -O cek-ws "https://raw.githubusercontent.com/fanoraprem/srcscript/main/xray/cek-ws.sh"
+wget -O about "https://raw.githubusercontent.com/fanoraprem/srcscript/main/ssh/about.sh" 
+wget -O running "https://raw.githubusercontent.com/fanoraprem/srcscript/main/ssh/running.sh"
+wget -O banner "https://raw.githubusercontent.com/fanoraprem/srcscript/main/banner.sh"
+wget -O del-tr "https://raw.githubusercontent.com/fanoraprem/srcscript/main/xray/del-tr.sh"
+wget -O trial-menu "https://raw.githubusercontent.com/fanoraprem/srcscript/main/menu_all/trial-menu.sh"
+wget -O info-menu "https://raw.githubusercontent.com/fanoraprem/srcscript/main/menu_all/info-menu.sh"
+wget -O ceklim "https://raw.githubusercontent.com/fanoraprem/srcscript/main/ssh/ceklim.sh"
 chmod +x usernew
 chmod +x menu
 chmod +x hapus
